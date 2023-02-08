@@ -11,33 +11,24 @@
  *
  * @package ZetBlog
  */
-
-get_header();
 ?>
-
-
 <!DOCTYPE html>
-<html lang="en">
-
+<html <?php language_attributes(); ?>>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="">
-	<meta name="author" content="">
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.ico">
-	<title>Mediumish - A Medium style template by WowThemes.net</title>
 	<!-- Bootstrap core CSS -->
 	<link href="<?php echo get_template_directory_uri(); ?>/assets/css/bootstrap.min.css" rel="stylesheet">
 	<!-- Fonts -->
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
 	<!-- Custom styles for this template -->
 	<link href="<?php echo get_template_directory_uri(); ?>/assets/css/mediumish.css" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>
-
-<body>
-
+<body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
 	<!-- Begin Nav
 ================================================== -->
 	<nav class="navbar navbar-toggleable-md navbar-light bg-white fixed-top mediumnavigation">
@@ -46,15 +37,18 @@ get_header();
 			aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-		<div class="container">
+		<div class="container logo-container">
 			<!-- Begin Logo -->
-			<a class="navbar-brand" href="index.html">
-				<img src="assets/img/logo.png" alt="logo">
-			</a>
+			
+			<?php
+			the_custom_logo();
+			?>
+			
 			<!-- End Logo -->
 			<div class="collapse navbar-collapse" id="navbarsExampleDefault">
 				<!-- Begin Menu -->
-				<ul class="navbar-nav ml-auto">
+				<?php echo zetblogtheme_wp_nav_menu(); ?>
+				<!-- <ul class="navbar-nav ml-auto">
 					<li class="nav-item active">
 						<a class="nav-link" href="index.html">Stories <span class="sr-only">(current)</span></a>
 					</li>
@@ -64,7 +58,7 @@ get_header();
 					<li class="nav-item">
 						<a class="nav-link" href="author.html">Author</a>
 					</li>
-				</ul>
+				</ul> -->
 				<!-- End Menu -->
 				<!-- Begin Search -->
 				<form class="form-inline my-2 my-lg-0">

@@ -182,6 +182,11 @@ require get_template_directory() . '/inc/template-functions.php';
  */
 require get_template_directory() . '/inc/customizer.php';
 
+
+require get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
+
+require get_template_directory() . '/inc/zet-helper.php';
+
 /**
  * Load Jetpack compatibility file.
  */
