@@ -448,6 +448,9 @@ ul.tags li a:hover {
     align-items: center;
     justify-content: center;
 }
+.card-block p {
+    color: #666;
+}
 @media only screen and (max-width: 600px) {
 	.logo-container{
 		margin-left: 0px;

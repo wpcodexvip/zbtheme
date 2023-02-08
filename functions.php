@@ -187,6 +187,8 @@ require get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
 
 require get_template_directory() . '/inc/zet-helper.php';
 
+require get_template_directory() . '/inc/post-teamplate.php';
+
 /**
  * Load Jetpack compatibility file.
  */
