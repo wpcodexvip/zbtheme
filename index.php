@@ -4,10 +4,13 @@
 ================================================== -->
 	<div class="container">
 		<div class="mainheading">
-			<h1 class="sitetitle">Mediumish</h1>
-			<p class="lead">
-				Bootstrap theme, medium style, simply perfect for bloggers
-			</p>
+			<?php
+
+				if(is_active_sidebar( "sidebar-2" )){
+					dynamic_sidebar( "sidebar-2" );
+				}
+
+			?>
 		</div>
 		<!-- End Site Title
 ================================================== -->

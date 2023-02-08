@@ -134,6 +134,19 @@ function zetblog_widgets_init() {
 }
 add_action( 'widgets_init', 'zetblog_widgets_init' );
 
+
+function zetblog_header_ads_widgets_init() {
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Header Ads', 'zetblog' ),
+			'id'            => 'sidebar-2',
+			'description'   => esc_html__( 'Add widgets here.', 'zetblog' ),
+		)
+	);
+}
+add_action( 'widgets_init', 'zetblog_header_ads_widgets_init' );
+
+
 /**
  * Enqueue scripts and styles.
  */
